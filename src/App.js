@@ -1,6 +1,5 @@
 import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Home from "./components/Home";
 import Navbar from "./components/Navbar";
 import About from "./components/About";
 import Alert from "./components/Alert";
@@ -20,6 +19,7 @@ import UserState from './context/user/UserState';
 
 
 import { useEffect} from 'react'
+import Home from "./components/home/Home";
 
 function App() {
   const [alert, setAlert] = useState(null);
@@ -44,6 +44,7 @@ function App() {
         <Alert alert={alert} />
         <div className="container">
           <Routes>
+            
             <Route path="/" element={<Home showAlert={showAlert} />} />
             <Route path="/about" element={<About showAlert={showAlert} />} />
             
